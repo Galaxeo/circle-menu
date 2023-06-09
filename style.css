@@ -63,6 +63,8 @@ button {
   border-radius: 50%;
   text-align: center;
   line-height: 160px;
+  font-size: 4vw;
+  text-shadow: 0px 0px 5px black;
   transition: all 0.2s ease-in-out;
   box-shadow: 0px 0px 25px 0px;
 }
