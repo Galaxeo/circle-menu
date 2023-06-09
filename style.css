@@ -8,6 +8,35 @@
   color: #e1e1e1;
   line-height: 1.35;
 }
+html.dark {
+  --color-base-bg: rgb(32, 32, 35);
+  --color-base-text: #e1e1e1;
+}
+html.light {
+  --color-base-bg: #e1e1e1;
+  --color-base-text: rgb(32, 32, 35);
+}
+body, .theme-toggle {
+  color: var(--color-base-text);
+}
+body, html{
+  background-color: var(--color-base-bg);
+}
+.theme-toggle {
+  background-color: var(--color-base-bg);
+  font-size: 1.125rem;
+  padding: 10px 20px;
+}
+.theme-toggle:hover {
+  cursor: pointer;
+}
+.theme-toggle:active {
+  transform: scale(0.97);
+}
+i {
+  background-color: var(--color-base-bg);
+  color: var(--color-base-text);
+}
 button {
   padding: 0;
   border: none;
@@ -18,13 +47,14 @@ button {
   justify-content: center;
 }
 .wrap {
-  height: min(750px, 50vw);
-  width: min(750px, 50vw);
+  height: min(750px, 50vw, 50vh);
+  width: min(750px, 50vw, 50vh);
   border-radius: 50%;
   position: relative;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 20vh;
   overflow: hidden;
+  filter: blur(0px);
   box-shadow: 0px 0px 5px 0px #000000;
 }
 .quart {
@@ -63,10 +93,10 @@ button {
   border-radius: 50%;
   text-align: center;
   line-height: 160px;
-  font-size: 4vw;
+  font-size: min(2.5vw, 3.5vh);
   text-shadow: 0px 0px 5px black;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0px 0px 25px 0px;
+  box-shadow: 0px 0px 15px 0px;
 }
 .quart:hover {
   transition: all 0.3s;
@@ -77,5 +107,5 @@ button {
   transition: all 0.2s ease-in-out;
 }
 .center:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
 }

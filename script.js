@@ -10,7 +10,7 @@ quarts.forEach(quart => quart.addEventListener('mouseover', function() {
     center.style.backgroundImage = "url('resources/works.png')";
     center.innerHTML = "Works";
   } else if (quart.id == "Keyboards") {
-    center.style.backgroundImage = "url('resources/keyboards.jpg')";
+    center.style.backgroundImage = "url('resources/keyboards.png')";
     center.innerHTML = "Keyboards";
   } else if (quart.id == "Resume") {
     center.style.backgroundImage = "url('resources/resume.png')";
@@ -26,3 +26,14 @@ quarts.forEach(quart => quart.addEventListener('mouseout', function(event) {
   center.style.top = '15%';
   center.style.left = '15%';
 }));
+function setTheme() {
+  const root = document.querySelector('html');
+  const lightBulb = "fa-solid fa-lightbulb";
+  const darkBulb = "fa-solid fa-lightbulb";
+  const lightIcon = document.querySelector('i');
+  const newTheme = root.className === 'dark' ? 'light' : 'dark';
+  const lightToggle = lightIcon.className === darkBulb ? lightBulb : darkBulb;
+  root.className = newTheme;
+  lightIcon.className = lightToggle;
+}
+document.querySelector('.theme-toggle').addEventListener('click', setTheme);
