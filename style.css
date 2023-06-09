@@ -33,7 +33,7 @@ body, html{
 .theme-toggle:active {
   transform: scale(0.97);
 }
-i {
+i.fa-lightbulb {
   background-color: var(--color-base-bg);
   color: var(--color-base-text);
 }
@@ -45,6 +45,9 @@ button {
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: var(--color-base-bg);
+  color: var(--color-base-text);
 }
 .wrap {
   height: min(750px, 50vw, 50vh);
